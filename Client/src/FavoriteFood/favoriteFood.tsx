@@ -1,26 +1,20 @@
 import React from "react";
 import { Grid,makeStyles, Theme,createStyles, MenuItem, FormGroup, FormControlLabel, Checkbox, Card, withStyles } from "@material-ui/core";
 import StyledButton from "../Utils/StyledButton";
-import { SwapCalls } from "@material-ui/icons";
+import { userState } from "../User/user";
 
 
-// const StyledButton = withStyles({
-//     root: {
-        
-//       background: "Aqua",
-//       borderRadius: 30,
-//       float: "left"
-//     }
-//   })(Button);
+interface Props {
+  updateUser: ( user: userState)  => void,
+  currentUser:userState;
 
-
-
+}
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       '& .MuiTextField-root': {
         margin: theme.spacing(5),
-        width: 200,
+        minWidth: 200,
       }},
     cardItem:{
         marginBottom: theme.spacing(3),
@@ -28,8 +22,9 @@ const useStyles = makeStyles((theme: Theme) =>
     }
   }),
 );
-const FavoriteFood: React.FC = (): JSX.Element => {
+const FavoriteFood = (props:Props): JSX.Element => {
 
+  const [user, setUser] = React.useState<userState>(props.currentUser); 
  const classes = useStyles();   
        return (
        <Grid  className={classes.root} >
@@ -92,6 +87,7 @@ const FavoriteFood: React.FC = (): JSX.Element => {
         <StyledButton dir="ltr"
           onClick={() =>
             {
+              // props.updateUser(user:userState);
               alert('הנתונים נשמרו');
             }}
         >סיום</StyledButton>

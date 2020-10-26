@@ -1,13 +1,14 @@
 import React from 'react';
-import {createStyles, makeStyles, TextField} from '@material-ui/core';
+import {createStyles, FilledTextFieldProps, makeStyles, OutlinedTextFieldProps, StandardTextFieldProps, TextField, TextFieldProps, } from '@material-ui/core';
 
-export interface SimpleTextFieldProps{
+export interface SimpleTextFieldProps extends  OutlinedTextFieldProps  {
     children?: JSX.Element[] |JSX.Element;
     id: string,
     type?:string,
     select?:boolean,
-    label?:string
-
+    label?:string,
+    value?:any
+  //   onChange?: (event: React.ChangeEvent<{}>) => void,
 }
 
 
@@ -18,15 +19,14 @@ const useStyles = makeStyles(() =>
         minWidth: 100
       }
     } ));
-const SimpleTextField= (props:SimpleTextFieldProps) => { 
 
+const SimpleTextField= (props:SimpleTextFieldProps ) => { 
+  // const { children,id,type,select,label, ...rest } = props;
   const classes = useStyles();
     return (
         <TextField 
-        variant="outlined"
         size="small"
-         className={classes.wdth}
-         
+        onChange={props.onChange}
         {...props}
         >
             {props.children}

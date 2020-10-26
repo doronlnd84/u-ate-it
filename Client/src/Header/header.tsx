@@ -6,8 +6,7 @@ import Ballot from '@material-ui/icons/Ballot'
 import {makeStyles, Theme} from '@material-ui/core/styles';
 import { useSelector } from 'react-redux';
 import StoreStateType from '../Store/storeStateType';
-import { userState } from '../Store/User/userActionTypes';
-
+import {userState} from '../User/user'
 
 const useMyStyles = makeStyles((theme: Theme) => ({
   root: {

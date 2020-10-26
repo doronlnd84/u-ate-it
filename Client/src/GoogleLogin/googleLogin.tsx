@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux';
 import { GoogleLogin, GoogleLogout,GoogleLoginResponse, GoogleLoginProps, GoogleLoginResponseOffline } from 'react-google-login';
 import {setLogin,setLogout} from '../Store/User/userActionCreators';
-import {userState} from '../Store/User/userActionTypes';
+import {userState} from '../User/user';
 import StoreStateType from '../Store/storeStateType';
 
 const CLIENT_ID = '112780208456-r6eoii5l30p9gdkivbjtnfaobpivg5nm.apps.googleusercontent.com';

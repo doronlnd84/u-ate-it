@@ -6,7 +6,7 @@ import {makeStyles} from '@material-ui/core/styles';
 import Wellcome from './WellcomeMessage/wellcomeMessage';
 import TabManagement from './TabManagement/tabManagment';
 import StoreStateType from './Store/storeStateType';
-import { userState } from './Store/User/userActionTypes';
+import { userState } from './User/user';
 import { Box } from '@material-ui/core';
 
 
@@ -41,12 +41,13 @@ const useStyles = makeStyles({
     });
 function App() {
   const classes = useStyles();
-  const isLogged:boolean =useSelector<StoreStateType,userState>(s=>s.user).isLogined
+  const currentUser:userState = useSelector<StoreStateType,userState>(s=>s.user);
+  const isLogged:boolean =currentUser.isLogined;
   return ( <div  >
            <div dir='rtl' className={classes.main}>
              <Header/>
              <Box width="70%" display={!isLogged?"none":"block"} aria-label="content"> 
-               <TabManagement/>  
+               <TabManagement currentUser={currentUser}/>  
             </Box>
             <Box   className={isLogged?classes.logged:classes.content}>
                <Wellcome/> 

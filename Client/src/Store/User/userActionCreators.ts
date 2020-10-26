@@ -1,6 +1,6 @@
 import {store} from '../store';
 import * as actionTypes from './userActionTypes';
-import {userState} from './userActionTypes';
+import {userState} from '../../User/user';
 
 export const setLogin = (user: userState): void => {
     store.dispatch({

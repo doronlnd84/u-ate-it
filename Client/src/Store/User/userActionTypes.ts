@@ -1,12 +1,8 @@
+import {userState} from '../../User/user';
+
 export const LOGIN = 'LOGIN';
 export const LOGOUT = 'LOGOUT';
 
-export interface userState  {
-    isLogined:boolean,
-    accessToken: string,
-    fullName?: string,
-    email?: string,
-  };   
 
 
 interface SetLogin {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
-import {userState} from '../Store/User/userActionTypes';
+import {userState} from '../User/user';
 import StoreStateType from '../Store/storeStateType';
 import { makeStyles } from '@material-ui/core';
 

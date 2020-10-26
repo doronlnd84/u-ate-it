@@ -1,4 +1,5 @@
-import {userState} from './User/userActionTypes'
+import {userState} from '../User/user'
 export default interface StoreStateType {
-    user:  userState; 
+    user:  userState;  
 }
+ 

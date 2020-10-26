@@ -1,6 +1,5 @@
 import * as Actions from './userActionTypes';
-import {userState} from './userActionTypes';
-
+import {userState} from '../../User/user';
 
 const initialState: userState  = {
     isLogined:false,
