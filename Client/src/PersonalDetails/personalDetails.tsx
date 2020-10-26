@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 // onClick={(e) => changeTab(1)}
-const PersonalDetail = (props:Props): JSX.Element => {
+const personalDetails = (props:Props): JSX.Element => {
 
   
   const [firstName, setFirstName] = React.useState<string|undefined>(undefined);   
@@ -157,4 +157,4 @@ const PersonalDetail = (props:Props): JSX.Element => {
               </Box>
               
 }
-export default PersonalDetail;
+export default personalDetails;

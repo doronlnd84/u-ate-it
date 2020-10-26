@@ -5,7 +5,7 @@ import {makeStyles, Theme} from '@material-ui/core/styles';
 import PersonPinIcon from '@material-ui/icons/PersonPin';
 import FastfoodIcon from '@material-ui/icons/Fastfood';
 import { Box, Typography } from '@material-ui/core';
-import PersonalDetail from '../PersonalDetails/PersonalDetails';
+import personalDetail from '../PersonalDetails/personalDetails';
 import FavoriteFood from '../FavoriteFood/favoriteFood';
 import {userState} from '../User/user';
 
